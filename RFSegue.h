@@ -1,11 +1,14 @@
 /*!
     RFSegue
-    RFUI
- 
-    ver -.-.-
- */
 
-#import <UIKit/UIKit.h>
+    Copyright (c) 2012-2013 BB9z
+    http://github.com/bb9z/RFSegue
+
+    The MIT License (MIT)
+    http://www.opensource.org/licenses/mit-license.php
+*/
+
+#import "RFUI.h"
 
 @protocol RFSegueSourceDelegate;
 @protocol RFSegueDestinationDelegate;

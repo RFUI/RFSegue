@@ -1,10 +1,3 @@
-//
-//  RFDismissModalBarButtonItem.m
-//  mobook
-//
-//  Created by BB9z on 12-9-10.
-//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
-//
 
 #import "RFDismissModalBarButtonItem.h"
 

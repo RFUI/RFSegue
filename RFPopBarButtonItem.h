@@ -1,10 +1,13 @@
-//
-//  RFPopBarButtonItem.h
-//  mobook
-//
-//  Created by BB9z on 12-9-10.
-//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
-//
+/*!
+    RFPopBarButtonItem
+    RFSegue
+
+    Copyright (c) 2012-2013 BB9z
+    http://github.com/bb9z/RFSegue
+
+    The MIT License (MIT)
+    http://www.opensource.org/licenses/mit-license.php
+ */
 
 #import "RFUI.h"
 
