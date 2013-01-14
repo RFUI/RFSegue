@@ -10,8 +10,9 @@
  */
 
 #import "RFUI.h"
+#import "RFSegueDelegate.h"
 
 @interface RFPopBarButtonItem : UIBarButtonItem
-@property (RF_WEAK, nonatomic) IBOutlet UIViewController *masterViewController;
+@property (RF_WEAK, nonatomic) IBOutlet UIViewController<RFSegueReturnDelegate> *masterViewController;
 
 @end

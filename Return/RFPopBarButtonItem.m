@@ -12,7 +12,13 @@
 
 - (void)onBarButtonTapped {
     if (self.masterViewController) {
+        if ([self.masterViewController respondsToSelector:@selector(RFSegueWillReturn:)]) {
+            [self.masterViewController RFSegueWillReturn:self];
+        }
         [self.masterViewController.navigationController popViewControllerAnimated:YES];
+        if ([self.masterViewController respondsToSelector:@selector(RFSegueDidReturn:)]) {
+            [self.masterViewController RFSegueDidReturn:self];
+        }
     }
 }
 

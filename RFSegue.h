@@ -9,11 +9,10 @@
 */
 
 #import "RFUI.h"
-
-@protocol RFSegueSourceDelegate;
-@protocol RFSegueDestinationDelegate;
+#import "RFSegueDelegate.h"
 
 @interface RFSegue : UIStoryboardSegue
+<RFForSubclass>
 
 @property (RF_STRONG, nonatomic) NSDictionary *userInfo;
 
@@ -26,19 +25,4 @@
     Subclasses should always override this method instead of [RFSegue perform] and use it to perform the animations from the views in sourceViewController to the views in destinationViewController.
  */
 - (void)RFPerform;
-@end
-
-#pragma mark -
-@protocol RFSegueSourceDelegate <NSObject>
-@optional
-- (BOOL)RFSegueShouldPerform:(RFSegue *)segue;
-- (void)RFSegueWillPerform:(RFSegue *)segue;
-- (void)RFSegueDidPerformed:(RFSegue *)segue;
-@end
-
-#pragma mark -
-@protocol RFSegueDestinationDelegate <NSObject>
-@optional
-- (void)RFSegueDidPerformed:(RFSegue *)segue userInfo:(NSDictionary *)userInfo;
-
 @end

@@ -10,8 +10,9 @@
  */
 
 #import "RFUI.h"
+#import "RFSegueDelegate.h"
 
 @interface RFDismissModalBarButtonItem : UIBarButtonItem
-@property (RF_WEAK, nonatomic) IBOutlet UIViewController *masterViewController;
+@property (RF_WEAK, nonatomic) IBOutlet UIViewController<RFSegueReturnDelegate> *masterViewController;
 
 @end
