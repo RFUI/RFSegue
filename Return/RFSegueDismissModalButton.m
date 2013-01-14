@@ -10,12 +10,24 @@
 }
 
 - (void)onButtonTapped {
-    if ([self.masterViewController respondsToSelector:@selector(RFSegueWillReturn:)]) {
-        [self.masterViewController RFSegueWillReturn:self];
+    if (!self.masterViewController) {
+        dout_warning(@"RFDismissModalBarButtonItem: masterViewController not set for %@", self);
+        return;
     }
-    [self.masterViewController dismissModalViewControllerAnimated:YES];
-    if ([self.masterViewController respondsToSelector:@selector(RFSegueDidReturn:)]) {
-        [self.masterViewController RFSegueDidReturn:self];
+    
+    BOOL shouldReturn = YES;
+    if ([self.masterViewController respondsToSelector:@selector(RFSegueShouldReturn:)]) {
+        shouldReturn = [self.masterViewController RFSegueShouldReturn:self];
+    }
+    
+    if (shouldReturn) {
+        if ([self.masterViewController respondsToSelector:@selector(RFSegueWillReturn:)]) {
+            [self.masterViewController RFSegueWillReturn:self];
+        }
+        [self.masterViewController dismissModalViewControllerAnimated:YES];
+        if ([self.masterViewController respondsToSelector:@selector(RFSegueDidReturn:)]) {
+            [self.masterViewController RFSegueDidReturn:self];
+        }
     }
 }
 

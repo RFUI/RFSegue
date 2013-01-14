@@ -11,7 +11,17 @@
 }
 
 - (void)onBarButtonTapped {
-    if (self.masterViewController) {
+    if (!self.masterViewController) {
+        dout_warning(@"RFDismissModalBarButtonItem: masterViewController not set for %@", self);
+        return;
+    }
+    
+    BOOL shouldReturn = YES;
+    if ([self.masterViewController respondsToSelector:@selector(RFSegueShouldReturn:)]) {
+        shouldReturn = [self.masterViewController RFSegueShouldReturn:self];
+    }
+    
+    if (shouldReturn) {
         if ([self.masterViewController respondsToSelector:@selector(RFSegueWillReturn:)]) {
             [self.masterViewController RFSegueWillReturn:self];
         }

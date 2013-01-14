@@ -43,6 +43,7 @@
 
 - (void)RFPerform {
     // nothing
+    RFAssert(false, @"You should subclass RFSegue and override RFPerform.");
 }
 
 @end
