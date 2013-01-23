@@ -14,8 +14,8 @@
             self.userInfo];
 }
 
-- (id)initWithIdentifier:(NSString *)identifier source:(UIViewController *)source destination:(UIViewController *)destination {
-    if (self = [super initWithIdentifier:identifier source:source destination:destination]) {
+- (id)initWithIdentifier:(NSString *)identifier source:(UIViewController<RFSegueSourceDelegate> *)source destination:(UIViewController<RFSegueDestinationDelegate> *)destination {
+    if ((self = [super initWithIdentifier:identifier source:source destination:destination])) {
         //
     }
     return self;
