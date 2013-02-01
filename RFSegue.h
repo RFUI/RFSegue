@@ -17,8 +17,6 @@
 
 @property (RF_STRONG, nonatomic) NSDictionary *userInfo;
 
-- (id)initWithIdentifier:(NSString *)identifier source:(UIViewController<RFSegueSourceDelegate> *)source destination:(UIViewController<RFSegueDestinationDelegate> *)destination;
-
 /// Should not be overrided, see RFPerform
 - (void)perform;
 

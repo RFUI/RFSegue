@@ -14,13 +14,6 @@
             self.userInfo];
 }
 
-- (id)initWithIdentifier:(NSString *)identifier source:(UIViewController<RFSegueSourceDelegate> *)source destination:(UIViewController<RFSegueDestinationDelegate> *)destination {
-    if ((self = [super initWithIdentifier:identifier source:source destination:destination])) {
-        //
-    }
-    return self;
-}
-
 - (void)perform {
     BOOL shouldPerform = YES;
     if ([self.sourceViewController respondsToSelector:@selector(RFSegueShouldPerform:)]) {
