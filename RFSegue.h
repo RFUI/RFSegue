@@ -17,11 +17,9 @@
 
 @property (RF_STRONG, nonatomic) NSDictionary *userInfo;
 
-/// Should not be overrided, see RFPerform
+/// Should not be overrided, see `RFPerform`
 - (void)perform;
 
-/**
-    Subclasses should always override this method instead of [RFSegue perform] and use it to perform the animations from the views in sourceViewController to the views in destinationViewController.
- */
+/// Subclasses should always override this method instead of [RFSegue perform] and use it to perform the animations from the views in sourceViewController to the views in destinationViewController.
 - (void)RFPerform;
 @end

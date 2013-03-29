@@ -15,11 +15,12 @@
 }
 
 - (void)perform {
-    BOOL shouldPerform = YES;
     if ([self.sourceViewController respondsToSelector:@selector(RFSegueShouldPerform:)]) {
-        shouldPerform = [self.sourceViewController RFSegueShouldPerform:self];
+        if (![self.sourceViewController RFSegueShouldPerform:self]) {
+            return;
     }
-    if (shouldPerform) {
+    }
+
         if ([self.sourceViewController respondsToSelector:@selector(RFSegueWillPerform:)]) {
             [self.sourceViewController RFSegueWillPerform:self];
         }
@@ -35,7 +36,6 @@
 }
 
 - (void)RFPerform {
-    // nothing
     RFAssert(false, @"You should subclass RFSegue and override RFPerform.");
 }
 
