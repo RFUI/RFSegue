@@ -14,12 +14,16 @@
             self.userInfo];
 }
 
-- (void)perform {
+- (BOOL)shouldPerform {
+    BOOL shouldPerform = YES;
     if ([self.sourceViewController respondsToSelector:@selector(RFSegueShouldPerform:)]) {
-        if (![self.sourceViewController RFSegueShouldPerform:self]) {
-            return;
-        }
+        shouldPerform = [self.sourceViewController RFSegueShouldPerform:self];
     }
+    return shouldPerform;
+}
+
+- (void)perform {
+    if (![self shouldPerform]) return;
 
     if ([self.sourceViewController respondsToSelector:@selector(RFSegueWillPerform:)]) {
         [self.sourceViewController RFSegueWillPerform:self];

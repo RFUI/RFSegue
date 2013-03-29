@@ -1,6 +1,6 @@
 /*!
     RFSegue
-    ver 2.0.0
+    ver 2.0.1
  
     Copyright (c) 2012-2013 BB9z
     https://github.com/RFUI/RFSegue
@@ -20,6 +20,17 @@
 /// Should not be overrided, see `RFPerform`
 - (void)perform;
 
-/// Subclasses should always override this method instead of [RFSegue perform] and use it to perform the animations from the views in sourceViewController to the views in destinationViewController.
+/**
+ Subclasses should always override this method instead of `perform` and use
+ it to perform the animations from the views in sourceViewController to the views in 
+ destinationViewController.
+ */
 - (void)RFPerform;
+
+/**
+ Determines whether the segue should be triggered.
+ 
+ @discussion Subclass can override this method for additional check. Super must be called.
+ */
+- (BOOL)shouldPerform;
 @end

@@ -1,11 +1,12 @@
 RFSegue Change Log
 =====
 
-2.0.0
+2.0
 -----
 * Rewrite confused segue delegate.
+* Add shouldPerform method to integrate logical judgment.
 
-1.1.0
+1.1
 -----
 * New delegate header file.
 * New RFSegueReturnDelegate for return buttons.
