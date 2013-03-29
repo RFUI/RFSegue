@@ -16,15 +16,18 @@
 @optional
 - (BOOL)RFSegueShouldPerform:(RFSegue *)segue;
 - (void)RFSegueWillPerform:(RFSegue *)segue;
-- (void)RFSegueDidPerformed:(RFSegue *)segue;
+- (void)RFSegueDidPerform:(RFSegue *)segue;
 
 @end
 
 #pragma mark -
 @protocol RFSegueDestinationDelegate <NSObject>
 @optional
-- (void)RFSegueDidPerformed:(RFSegue *)segue userInfo:(NSDictionary *)userInfo;
+// Called after sourceViewController recive `RFSegueWillPerform:`.
+- (void)RFSegueWillAppear:(RFSegue *)segue;
 
+// Called after sourceViewController recive `RFSegueDidPerform:`.
+- (void)RFSegueDidAppear:(RFSegue *)segue;
 @end
 
 #pragma mark -

@@ -1,6 +1,10 @@
 RFSegue Change Log
 =====
 
+2.0.0
+-----
+* Rewrite confused segue delegate.
+
 1.1.0
 -----
 * New delegate header file.

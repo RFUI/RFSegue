@@ -18,20 +18,23 @@
     if ([self.sourceViewController respondsToSelector:@selector(RFSegueShouldPerform:)]) {
         if (![self.sourceViewController RFSegueShouldPerform:self]) {
             return;
-    }
+        }
     }
 
-        if ([self.sourceViewController respondsToSelector:@selector(RFSegueWillPerform:)]) {
-            [self.sourceViewController RFSegueWillPerform:self];
-        }
-        
-        [self RFPerform];
-        if ([self.sourceViewController respondsToSelector:@selector(RFSegueDidPerformed:)]) {
-            [self.sourceViewController RFSegueDidPerformed:self];
-        }
-        if ([self.destinationViewController respondsToSelector:@selector(RFSegueDidPerformed:userInfo:)]) {
-            [self.destinationViewController RFSegueDidPerformed:self userInfo:self.userInfo];
-        }
+    if ([self.sourceViewController respondsToSelector:@selector(RFSegueWillPerform:)]) {
+        [self.sourceViewController RFSegueWillPerform:self];
+    }
+    if ([self.destinationViewController respondsToSelector:@selector(RFSegueWillAppear:)]) {
+        [self.destinationViewController RFSegueWillAppear:self];
+    }
+    
+    [self RFPerform];
+    
+    if ([self.sourceViewController respondsToSelector:@selector(RFSegueDidPerform:)]) {
+        [self.sourceViewController RFSegueDidPerform:self];
+    }
+    if ([self.destinationViewController respondsToSelector:@selector(RFSegueDidAppear:)]) {
+        [self.destinationViewController RFSegueDidAppear:self];
     }
 }
 
