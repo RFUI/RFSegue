@@ -5,6 +5,7 @@ RFSegue Change Log
 -----
 * Rewrite confused segue delegate.
 * Add shouldPerform method to integrate logical judgment.
+* New RFContainedSegue.
 
 1.1
 -----
