@@ -2,6 +2,7 @@
 #import "RFSeguePopButton.h"
 
 @implementation RFSeguePopButton
+@synthesize masterViewController = _masterViewController;
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -10,23 +11,24 @@
 }
 
 - (void)onButtonTapped {
-    if (!self.masterViewController) {
+    UIViewController<RFSegueReturnDelegate> *master = self.masterViewController;
+    if (!master) {
         dout_warning(@"RFDismissModalBarButtonItem: masterViewController not set for %@", self);
         return;
     }
     
     BOOL shouldReturn = YES;
-    if ([self.masterViewController respondsToSelector:@selector(RFSegueShouldReturn:)]) {
-        shouldReturn = [self.masterViewController RFSegueShouldReturn:self];
+    if ([master respondsToSelector:@selector(RFSegueShouldReturn:)]) {
+        shouldReturn = [master RFSegueShouldReturn:self];
     }
     
     if (shouldReturn) {
-        if ([self.masterViewController respondsToSelector:@selector(RFSegueWillReturn:)]) {
-            [self.masterViewController RFSegueWillReturn:self];
+        if ([master respondsToSelector:@selector(RFSegueWillReturn:)]) {
+            [master RFSegueWillReturn:self];
         }
-        [self.masterViewController.navigationController popViewControllerAnimated:YES];
-        if ([self.masterViewController respondsToSelector:@selector(RFSegueDidReturn:)]) {
-            [self.masterViewController RFSegueDidReturn:self];
+        [master.navigationController popViewControllerAnimated:YES];
+        if ([master respondsToSelector:@selector(RFSegueDidReturn:)]) {
+            [master RFSegueDidReturn:self];
         }
     }
 }
