@@ -29,6 +29,7 @@
     [self.sourceViewController addChildViewController:self.destinationViewController];
     [[self.sourceViewController containedViewHolder] addSubview:[self.destinationViewController view] resizeOption:RFViewResizeOptionFill];
     [self.destinationViewController view].autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    [self.sourceViewController setContainedViewController:self.destinationViewController];
 }
 
 @end
