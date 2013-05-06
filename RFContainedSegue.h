@@ -34,4 +34,5 @@
 @end
 
 @interface RFContainedSegue : RFSegue
+<RFSupportIOS5_0>
 @end

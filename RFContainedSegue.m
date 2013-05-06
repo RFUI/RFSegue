@@ -22,14 +22,21 @@
 }
 
 - (void)RFPerform {
-    if ([self.sourceViewController containedViewController]) {
-        [[self.sourceViewController containedViewController] removeFromParentViewControllerAndView];
+    UIViewController<RFContainedSegueSourceDelegate> *vcContainer = self.sourceViewController;
+    UIViewController *vcOld = [vcContainer containedViewController];
+    UIViewController *vcNew = self.destinationViewController;
+    
+    if (vcOld) {
+        [vcOld willMoveToParentViewController:nil];
+        [vcOld.view removeFromSuperview];
+        [vcOld removeFromParentViewController];
     }
     
-    [self.sourceViewController addChildViewController:self.destinationViewController];
-    [[self.sourceViewController containedViewHolder] addSubview:[self.destinationViewController view] resizeOption:RFViewResizeOptionFill];
-    [self.destinationViewController view].autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    [self.sourceViewController setContainedViewController:self.destinationViewController];
+    [vcContainer addChildViewController:vcNew];
+    [[vcContainer containedViewHolder] addSubview:vcNew.view resizeOption:RFViewResizeOptionFill];
+    vcNew.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    [vcContainer setContainedViewController:vcNew];
+    [vcNew didMoveToParentViewController:vcContainer];
 }
 
 @end
