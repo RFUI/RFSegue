@@ -14,7 +14,7 @@
 - (void)onBarButtonTapped {
     UIViewController<RFSegueReturnDelegate> *master = self.masterViewController;
     if (!master) {
-        dout_warning(@"RFDismissModalBarButtonItem: masterViewController not set for %@", self);
+        dout_warning(@"RFPopBarButtonItem: masterViewController not set for %@", self);
         return;
     }
     

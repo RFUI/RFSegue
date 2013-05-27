@@ -13,8 +13,7 @@
 - (void)onButtonTapped {
     UIViewController<RFSegueReturnDelegate> *master = self.masterViewController;
     if (!master) {
-        dout_warning(@"RFDismissModalBarButtonItem: masterViewController not set for %@", self);
-        return;
+        master = (UIViewController<RFSegueReturnDelegate> *)self.viewController;
     }
     
     BOOL shouldReturn = YES;
