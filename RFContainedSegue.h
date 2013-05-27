@@ -23,9 +23,8 @@
 
 @protocol RFContainedSegueSourceDelegate <NSObject>
 @required
-- (UIView *)containedViewHolder;
-- (UIViewController *)containedViewController;
-- (void)setContainedViewController:(UIViewController *)containedViewController;
+@property (weak, nonatomic) IBOutlet UIView *containedViewHolder;
+@property (strong, nonatomic) UIViewController *containedViewController;
 
 @optional
 /// The priority is higher than `RFSegueShouldPerform` delegate method.
