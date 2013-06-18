@@ -23,7 +23,7 @@
 
 - (void)RFPerform {
     UIViewController<RFContainedSegueSourceDelegate> *vcContainer = self.sourceViewController;
-    UIViewController *vcOld = [vcContainer containedViewController];
+    UIViewController *vcOld = vcContainer.containedViewController;
     UIViewController *vcNew = self.destinationViewController;
     
     if (vcOld) {
@@ -32,11 +32,14 @@
         [vcOld removeFromParentViewController];
     }
     
-    [vcContainer addChildViewController:vcNew];
-    [[vcContainer containedViewHolder] addSubview:vcNew.view resizeOption:RFViewResizeOptionFill];
-    vcNew.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    [vcContainer setContainedViewController:vcNew];
-    [vcNew didMoveToParentViewController:vcContainer];
+    if (vcNew) {
+        [vcContainer addChildViewController:vcNew];
+        [vcContainer.containedViewHolder addSubview:vcNew.view resizeOption:RFViewResizeOptionFill];
+        vcNew.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+        [vcNew didMoveToParentViewController:vcContainer];
+    }
+    
+    vcContainer.containedViewController = vcNew;
 }
 
 @end
