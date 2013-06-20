@@ -1,5 +1,6 @@
 RFSegue - 提供UIStoryboardSegue缺失的功能
 =====
+<base href="//github.com/RFUI/RFSegue/blob/master/" />
 <small>[English](Readme.md) *简体中文*</small>
 
 Source & Destination Delegate

@@ -1,5 +1,6 @@
 RFSegue - Add missing functions for UIStoryboardSegue
 =====
+<base href="//github.com/RFUI/RFSegue/blob/master/" />
 <small>*English* [简体中文](Readme~zh-hans.md)</small>
 
 Source & Destination Delegate
