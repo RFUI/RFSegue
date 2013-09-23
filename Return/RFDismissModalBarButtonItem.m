@@ -27,10 +27,11 @@
         if ([master respondsToSelector:@selector(RFSegueWillReturn:)]) {
             [master RFSegueWillReturn:self];
         }
-        [master dismissModalViewControllerAnimated:YES];
-        if ([master respondsToSelector:@selector(RFSegueDidReturn:)]) {
-            [master RFSegueDidReturn:self];
-        }
+        [master dismissViewControllerAnimated:YES completion:^{
+            if ([master respondsToSelector:@selector(RFSegueDidReturn:)]) {
+                [master RFSegueDidReturn:self];
+            }
+        }];
     }
 }
 
