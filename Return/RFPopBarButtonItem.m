@@ -2,7 +2,6 @@
 #import "RFPopBarButtonItem.h"
 
 @implementation RFPopBarButtonItem
-@synthesize masterViewController = _masterViewController;
 
 - (void)awakeFromNib {
     [super awakeFromNib];

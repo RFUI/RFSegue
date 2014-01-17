@@ -2,7 +2,7 @@
     RFSegueDismissModalButton
     RFSegue
 
-    Copyright (c) 2012-2013 BB9z
+    Copyright (c) 2012-2014 BB9z
     https://github.com/RFUI/RFSegue
 
     The MIT License (MIT)
@@ -13,6 +13,6 @@
 #import "RFSegueDelegate.h"
 
 @interface RFSegueDismissModalButton : UIButton
-@property (RF_WEAK, nonatomic) IBOutlet UIViewController<RFSegueReturnDelegate> *masterViewController;
+@property (weak, nonatomic) UIViewController<RFSegueReturnDelegate> *masterViewController DEPRECATED_ATTRIBUTE;
 
 @end

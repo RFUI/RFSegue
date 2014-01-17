@@ -2,7 +2,6 @@
 #import "RFDismissModalBarButtonItem.h"
 
 @implementation RFDismissModalBarButtonItem
-@synthesize masterViewController = _masterViewController;
 
 - (void)awakeFromNib {
     [super awakeFromNib];

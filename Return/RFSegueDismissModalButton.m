@@ -1,5 +1,6 @@
 
 #import "RFSegueDismissModalButton.h"
+#import "UIView+RFKit.h"
 
 @implementation RFSegueDismissModalButton
 @synthesize masterViewController = _masterViewController;
@@ -11,11 +12,11 @@
 }
 
 - (void)onButtonTapped {
-    UIViewController<RFSegueReturnDelegate> *master = self.masterViewController;
-    if (!master) {
-        master = (UIViewController<RFSegueReturnDelegate> *)self.viewController;
-    }
-    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+    UIViewController<RFSegueReturnDelegate> *master = (self.masterViewController)? self.masterViewController : (UIViewController<RFSegueReturnDelegate> *)self.viewController;
+#pragma clang diagnostic pop
+
     BOOL shouldReturn = YES;
     if ([master respondsToSelector:@selector(RFSegueShouldReturn:)]) {
         shouldReturn = [master RFSegueShouldReturn:self];
