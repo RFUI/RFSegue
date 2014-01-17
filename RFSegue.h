@@ -12,10 +12,17 @@
 #import "RFUI.h"
 #import "RFSegueDelegate.h"
 
-@interface RFSegue : UIStoryboardSegue
-<RFForSubclass>
+/** RFSegug add missing features for UIStoryboardSegue. 
+ 
+ Such as determines whether the segue with the specified identifier should be triggered on iOS 5. Notice source and destination view controller a segue will or did performed.
 
-@property (RF_STRONG, nonatomic) NSDictionary *userInfo;
+ You must overrided `RFPerform` to use it.
+ */
+NS_CLASS_AVAILABLE_IOS(5_0) @interface RFSegue : UIStoryboardSegue <
+    RFForSubclass
+>
+
+@property (strong, nonatomic) NSDictionary *userInfo;
 
 /// Should not be overrided, see `RFPerform`
 - (void)perform;

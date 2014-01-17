@@ -2,7 +2,6 @@
 #import "RFSegue.h"
 
 @implementation RFSegue
-@synthesize userInfo;
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"<%@: %p; sourceViewController: %@; destinationViewController: %@; identifier:%@; userInfo:%@>",

@@ -18,8 +18,8 @@
  
  The default implementation just remove previous view controller´s view and add the one´s, no animations. You can override this class to add additional animation effects.
  */
-
-@class RFContainedSegue;
+@interface RFContainedSegue : RFSegue
+@end
 
 @protocol RFContainedSegueSourceDelegate <NSObject>
 @required
@@ -32,6 +32,4 @@
 
 @end
 
-@interface RFContainedSegue : RFSegue
-<RFSupportIOS5_0>
-@end
+
