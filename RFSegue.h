@@ -1,8 +1,8 @@
 /*!
     RFSegue
-    ver 2.0.1
+    ver 2.0.2
  
-    Copyright (c) 2012-2013 BB9z
+    Copyright (c) 2012-2014 BB9z
     https://github.com/RFUI/RFSegue
 
     The MIT License (MIT)
