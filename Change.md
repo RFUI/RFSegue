@@ -1,11 +1,19 @@
 RFSegue Change Log
 =====
 
+2.2
+-----
+* IBOutlet no longer needs for RFSegueDismissModalButton and RFSeguePopButton.
+* Minor changes.
+
+2.1
+----
+* New RFContainedSegue.
+
 2.0
 -----
 * Rewrite confused segue delegate.
 * Add shouldPerform method to integrate logical judgment.
-* New RFContainedSegue.
 
 1.1
 -----

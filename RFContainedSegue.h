@@ -2,7 +2,7 @@
     RFContainedSegue
     RFSegue
 
-    Copyright (c) 2013 BB9z
+    Copyright (c) 2013-2014 BB9z
     https://github.com/RFUI/RFSegue
 
     The MIT License (MIT)
