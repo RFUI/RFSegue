@@ -1,7 +1,14 @@
 
 #import "RFSegue.h"
 
+//! REF: http://stackoverflow.com/a/24423494
+NSTimeInterval RFSegueNavigationTransitionDuration = 0.35f;
+
 @implementation RFSegue
+
++ (void)load {
+    RFSegueNavigationTransitionDuration = RF_iOS6Before? 0.35f : 0.505f;
+}
 
 - (NSString *)description {
     return [NSString stringWithFormat:@"<%@: %p; sourceViewController: %@; destinationViewController: %@; identifier:%@; userInfo:%@>",

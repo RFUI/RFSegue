@@ -45,3 +45,5 @@ NS_CLASS_AVAILABLE_IOS(5_0) @interface RFSegue : UIStoryboardSegue <
 - (BOOL)shouldPerform;
 
 @end
+
+extern NSTimeInterval RFSegueNavigationTransitionDuration;
