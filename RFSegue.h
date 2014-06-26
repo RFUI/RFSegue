@@ -28,11 +28,14 @@ NS_CLASS_AVAILABLE_IOS(5_0) @interface RFSegue : UIStoryboardSegue <
 - (void)perform;
 
 /**
- Subclasses should always override this method instead of `perform` and use
- it to perform the animations from the views in sourceViewController to the views in 
- destinationViewController.
+ Subclasses should always override this method instead of `perform` and use it to perform the animations from the views in sourceViewController to the views in destinationViewController.
+ 
+ You should call `noticeDelegateWillPerform` and `noticeDelegateDidPerformed` manually to notice sourceViewController and destinationViewController about the reciver’s stauts.
  */
 - (void)RFPerform;
+
+- (void)noticeDelegateWillPerform;
+- (void)noticeDelegateDidPerformed;
 
 /**
  Determines whether the segue should be triggered.
@@ -40,4 +43,5 @@ NS_CLASS_AVAILABLE_IOS(5_0) @interface RFSegue : UIStoryboardSegue <
  @discussion Subclass can override this method for additional check. Super must be called.
  */
 - (BOOL)shouldPerform;
+
 @end

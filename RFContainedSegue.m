@@ -22,6 +22,7 @@
 }
 
 - (void)RFPerform {
+    [self noticeDelegateWillPerform];
     UIViewController<RFContainedSegueSourceDelegate> *vcContainer = self.sourceViewController;
     UIViewController *vcOld = vcContainer.containedViewController;
     UIViewController *vcNew = self.destinationViewController;
@@ -40,6 +41,7 @@
     }
     
     vcContainer.containedViewController = vcNew;
+    [self noticeDelegateDidPerformed];
 }
 
 @end
