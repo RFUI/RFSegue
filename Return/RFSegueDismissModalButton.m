@@ -3,7 +3,6 @@
 #import "UIView+RFKit.h"
 
 @implementation RFSegueDismissModalButton
-@synthesize masterViewController = _masterViewController;
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -12,10 +11,7 @@
 }
 
 - (void)onButtonTapped {
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-    UIViewController<RFSegueReturnDelegate> *master = (self.masterViewController)? self.masterViewController : (UIViewController<RFSegueReturnDelegate> *)self.viewController;
-#pragma clang diagnostic pop
+    UIViewController<RFSegueReturnDelegate> *master = (id)self.viewController;
 
     BOOL shouldReturn = YES;
     if ([master respondsToSelector:@selector(RFSegueShouldReturn:)]) {

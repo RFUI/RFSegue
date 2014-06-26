@@ -13,6 +13,4 @@
 #import "RFSegueDelegate.h"
 
 @interface RFSeguePopButton : UIButton
-@property (weak, nonatomic) UIViewController<RFSegueReturnDelegate> *masterViewController DEPRECATED_ATTRIBUTE;
-
 @end
