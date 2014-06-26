@@ -1,6 +1,6 @@
 /*!
     RFSegue
-    ver 2.2.0
+    ver 2.3
  
     Copyright (c) 2012-2014 BB9z
     https://github.com/RFUI/RFSegue
