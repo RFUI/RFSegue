@@ -1,5 +1,6 @@
 
 #import "RFSeguePopButton.h"
+#import "RFSegue.h"
 
 @implementation RFSeguePopButton
 
@@ -22,9 +23,11 @@
             [master RFSegueWillReturn:self];
         }
         [master.navigationController popViewControllerAnimated:YES];
-        if ([master respondsToSelector:@selector(RFSegueDidReturn:)]) {
-            [master RFSegueDidReturn:self];
-        }
+        dispatch_after_seconds(RFSegueNavigationTransitionDuration, ^{
+            if ([master respondsToSelector:@selector(RFSegueDidReturn:)]) {
+                [master RFSegueDidReturn:self];
+            }
+        });
     }
 }
 

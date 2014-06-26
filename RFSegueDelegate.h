@@ -2,7 +2,7 @@
     RFSegueDelegate
     RFSegue
 
-    Copyright (c) 2012-2013 BB9z
+    Copyright (c) 2012-2014 BB9z
     https://github.com/RFUI/RFSegue
 
     The MIT License (MIT)
@@ -15,7 +15,11 @@
 @protocol RFSegueSourceDelegate <NSObject>
 @optional
 - (BOOL)RFSegueShouldPerform:(RFSegue *)segue;
+
+/// Should called before destinationViewController receive `viewWillAppear`.
 - (void)RFSegueWillPerform:(RFSegue *)segue;
+
+/// Should called after destinationViewController receive `viewDidAppear`.
 - (void)RFSegueDidPerform:(RFSegue *)segue;
 
 @end
@@ -23,10 +27,10 @@
 #pragma mark -
 @protocol RFSegueDestinationDelegate <NSObject>
 @optional
-// Called after sourceViewController recive `RFSegueWillPerform:`.
+/// Called after sourceViewController recive `RFSegueWillPerform:`. And before destinationViewController receive `viewWillAppear`.
 - (void)RFSegueWillAppear:(RFSegue *)segue;
 
-// Called after sourceViewController recive `RFSegueDidPerform:`.
+/// Called after sourceViewController recive `RFSegueDidPerform:`. And after destinationViewController receive `viewDidAppear`.
 - (void)RFSegueDidAppear:(RFSegue *)segue;
 @end
 

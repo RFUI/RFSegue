@@ -1,5 +1,6 @@
 
 #import "RFPopBarButtonItem.h"
+#import "RFSegue.h"
 
 @implementation RFPopBarButtonItem
 
@@ -27,7 +28,7 @@
             [master RFSegueWillReturn:self];
         }
         [master.navigationController popViewControllerAnimated:YES];
-        dispatch_after_seconds(0.3, ^{
+        dispatch_after_seconds(RFSegueNavigationTransitionDuration, ^{
             if ([master respondsToSelector:@selector(RFSegueDidReturn:)]) {
                 [master RFSegueDidReturn:self];
             }

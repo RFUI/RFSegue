@@ -5,6 +5,7 @@ RFSegue Change Log
 ----
 * New `RFPresentSegue`.
 * RFSegue won't send delegate notice between RFPerform automatically. You should call `noticeDelegateWillPerform` and `noticeDelegateDidPerformed` manually.
+* Make sure `RFSegueDidPerform` and `RFSegueDidAppear` always called after the destinationViewController receive `viewDidAppear`.
 * Remove `RFSeguePopButton` and `RFSegueDismissModalButton`'s masterViewController property.
 
 2.2
