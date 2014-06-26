@@ -2,12 +2,12 @@
 #import "RFSegue.h"
 
 //! REF: http://stackoverflow.com/a/24423494
-NSTimeInterval RFSegueNavigationTransitionDuration = 0.35f;
+NSTimeInterval RFSegueNavigationTransitionDuration = 0.51f;
 
 @implementation RFSegue
 
 + (void)load {
-    RFSegueNavigationTransitionDuration = RF_iOS6Before? 0.35f : 0.505f;
+    RFSegueNavigationTransitionDuration = RF_iOS7Before? 0.36f : 0.511f;
 }
 
 - (NSString *)description {
