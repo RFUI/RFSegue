@@ -1,6 +1,9 @@
 RFSegue Change Log
 =====
 
+* RFSegue won't send delegate notice between RFPerform automatically. You should call `noticeDelegateWillPerform` and `noticeDelegateDidPerformed` manually.
+* Remove `RFSeguePopButton` and `RFSegueDismissModalButton`'s masterViewController property.
+
 2.2
 -----
 * IBOutlet no longer needs for RFSegueDismissModalButton and RFSeguePopButton.
