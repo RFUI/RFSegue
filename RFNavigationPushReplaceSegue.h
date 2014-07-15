@@ -1,5 +1,5 @@
 /*!
-    RFNavigationPushAsRootSegue
+    RFNavigationPushReplaceSegue
     RFSegue
 
     Copyright (c) 2013-2014 BB9z
@@ -10,6 +10,6 @@
  */
 #import "RFSegue.h"
 
-@interface RFNavigationPushAsRootSegue : RFSegue
+@interface RFNavigationPushReplaceSegue : RFSegue
 
 @end
