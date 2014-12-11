@@ -1,5 +1,6 @@
 
 #import "RFSegue.h"
+#import "RFSegueExternLink.h"
 
 //! REF: http://stackoverflow.com/a/24423494
 NSTimeInterval RFSegueNavigationTransitionDuration = 0.51f;
@@ -8,6 +9,25 @@ NSTimeInterval RFSegueNavigationTransitionDuration = 0.51f;
 
 + (void)load {
     RFSegueNavigationTransitionDuration = RF_iOS7Before? 0.36f : 0.511f;
+}
+
+- (instancetype)initWithIdentifier:(NSString *)identifier source:(UIViewController *)source destination:(UIViewController<RFSegueExternLink> *)destination {
+
+    // Load from external storyboard
+    if ([destination respondsToSelector:@selector(externalStoryboardName)]
+        && [destination respondsToSelector:@selector(externalScenceIdentifier)]) {
+        // Only load from external when storyboard name specified
+        if (destination.externalStoryboardName) {
+            UIStoryboard *sb = [UIStoryboard storyboardWithName:destination.externalStoryboardName bundle:nil];
+            UIViewController *vc = destination.externalScenceIdentifier? [sb instantiateViewControllerWithIdentifier:destination.externalScenceIdentifier] : [sb instantiateInitialViewController];
+            if (vc) {
+                destination = (id)vc;
+            }
+        }
+    }
+
+    self = [super initWithIdentifier:identifier source:source destination:destination];
+    return self;
 }
 
 - (NSString *)description {

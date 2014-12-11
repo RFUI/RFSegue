@@ -1,6 +1,6 @@
 /*!
     RFSegue
-    ver 2.3
+    ver 3.0
  
     Copyright (c) 2012-2014 BB9z
     https://github.com/RFUI/RFSegue
@@ -12,9 +12,14 @@
 #import "RFUI.h"
 #import "RFSegueDelegate.h"
 
-/** RFSegug add missing features for UIStoryboardSegue. 
+/**
+ RFSegug add missing features for UIStoryboardSegue.
  
- Such as determines whether the segue with the specified identifier should be triggered on iOS 5. Notice source and destination view controller a segue will or did performed.
+ Feature:
+
+ - Determines whether the segue with the specified identifier should be triggered on iOS 5.
+ 
+ - Experimental load scene from another storyboards.
 
  You must overrided `RFPerform` to use it.
  */
