@@ -11,22 +11,22 @@ NSTimeInterval RFSegueNavigationTransitionDuration = 0.51f;
     RFSegueNavigationTransitionDuration = RF_iOS7Before? 0.36f : 0.511f;
 }
 
-- (instancetype)initWithIdentifier:(NSString *)identifier source:(UIViewController *)source destination:(UIViewController<RFSegueExternLink> *)destination {
-
+- (instancetype)initWithIdentifier:(NSString *_Nullable)identifier source:(UIViewController *)source destination:(UIViewController *)destination {
+    UIViewController<RFSegueExternLink> *dst = (id)destination;
     // Load from external storyboard
-    if ([destination respondsToSelector:@selector(externalStoryboardName)]
-        && [destination respondsToSelector:@selector(externalScenceIdentifier)]) {
+    if ([dst respondsToSelector:@selector(externalStoryboardName)]
+        && [dst respondsToSelector:@selector(externalScenceIdentifier)]) {
         // Only load from external when storyboard name specified
-        if (destination.externalStoryboardName) {
-            UIStoryboard *sb = [UIStoryboard storyboardWithName:destination.externalStoryboardName bundle:nil];
-            UIViewController *vc = destination.externalScenceIdentifier? [sb instantiateViewControllerWithIdentifier:destination.externalScenceIdentifier] : [sb instantiateInitialViewController];
+        if (dst.externalStoryboardName) {
+            UIStoryboard *sb = [UIStoryboard storyboardWithName:dst.externalStoryboardName bundle:nil];
+            UIViewController *vc = dst.externalScenceIdentifier? [sb instantiateViewControllerWithIdentifier:dst.externalScenceIdentifier] : [sb instantiateInitialViewController];
             if (vc) {
-                destination = (id)vc;
+                dst = (id)vc;
             }
         }
     }
 
-    self = [super initWithIdentifier:identifier source:source destination:destination];
+    self = [super initWithIdentifier:identifier source:source destination:dst];
     return self;
 }
 
@@ -60,6 +60,9 @@ NSTimeInterval RFSegueNavigationTransitionDuration = 0.51f;
     [self noticeDelegateDidPerformed];
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+
 - (void)noticeDelegateWillPerform {
     if ([self.sourceViewController respondsToSelector:@selector(RFSegueWillPerform:)]) {
         [self.sourceViewController RFSegueWillPerform:self];
@@ -77,5 +80,7 @@ NSTimeInterval RFSegueNavigationTransitionDuration = 0.51f;
         [self.destinationViewController RFSegueDidAppear:self];
     }
 }
+
+#pragma clang diagnostic pop
 
 @end

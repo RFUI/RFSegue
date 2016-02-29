@@ -1,8 +1,8 @@
 /*!
     RFSegue
-    ver 3.0
+    ver 3.1.0
  
-    Copyright (c) 2012-2014 BB9z
+    Copyright (c) 2012-2014, 2016 BB9z
     https://github.com/RFUI/RFSegue
 
     The MIT License (MIT)
@@ -27,7 +27,7 @@ NS_CLASS_AVAILABLE_IOS(5_0) @interface RFSegue : UIStoryboardSegue <
     RFForSubclass
 >
 
-@property (strong, nonatomic) NSDictionary *userInfo;
+@property (nonatomic, nullable, copy) NSDictionary *userInfo;
 
 /// Should not be overrided, see `RFPerform`
 - (void)perform;
