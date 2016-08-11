@@ -33,7 +33,7 @@ NSTimeInterval RFSegueNavigationTransitionDuration = 0.51f;
 - (NSString *)description {
     return [NSString stringWithFormat:@"<%@: %p; sourceViewController: %@; destinationViewController: %@; identifier:%@; userInfo:%@>",
             NSStringFromClass([self class]),
-            self,
+            (void *)self,
             self.sourceViewController,
             self.destinationViewController,
             self.identifier,
