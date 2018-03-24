@@ -1,5 +1,6 @@
 
 #import "RFNavigationPushAsRootSegue.h"
+#import "RFDispatch.h"
 
 @implementation RFNavigationPushAsRootSegue
 

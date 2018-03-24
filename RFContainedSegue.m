@@ -1,5 +1,6 @@
 
 #import "RFContainedSegue.h"
+#import "UIView+RFKit.h"
 
 @interface RFContainedSegue ()
 @end

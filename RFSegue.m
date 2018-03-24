@@ -1,6 +1,8 @@
 
 #import "RFSegue.h"
+#import "RFRuntime.h"
 #import "RFSegueExternLink.h"
+#import "UIDevice+RFKit.h"
 
 //! REF: http://stackoverflow.com/a/24423494
 NSTimeInterval RFSegueNavigationTransitionDuration = 0.51f;

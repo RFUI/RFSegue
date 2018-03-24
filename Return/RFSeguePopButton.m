@@ -1,6 +1,8 @@
 
 #import "RFSeguePopButton.h"
 #import "RFSegue.h"
+#import "RFRuntime.h"
+#import "UIResponder+RFKit.h"
 
 @implementation RFSeguePopButton
 

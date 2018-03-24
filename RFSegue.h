@@ -1,6 +1,5 @@
 /*!
     RFSegue
-    ver 3.1.0
  
     Copyright (c) 2012-2014, 2016 BB9z
     https://github.com/RFUI/RFSegue
@@ -9,7 +8,7 @@
     http://www.opensource.org/licenses/mit-license.php
 */
 
-#import "RFUI.h"
+#import <UIKit/UIKit.h>
 #import "RFSegueDelegate.h"
 
 /**
@@ -23,9 +22,7 @@
 
  You must overrided `RFPerform` to use it.
  */
-NS_CLASS_AVAILABLE_IOS(5_0) @interface RFSegue : UIStoryboardSegue <
-    RFForSubclass
->
+NS_CLASS_AVAILABLE_IOS(5_0) @interface RFSegue : UIStoryboardSegue
 
 @property (nonatomic, nullable, copy) NSDictionary *userInfo;
 

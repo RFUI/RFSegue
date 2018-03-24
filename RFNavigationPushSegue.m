@@ -1,5 +1,6 @@
 
 #import "RFNavigationPushSegue.h"
+#import "RFDispatch.h"
 
 @implementation RFNavigationPushSegue
 

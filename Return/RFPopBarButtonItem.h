@@ -9,7 +9,7 @@
     http://www.opensource.org/licenses/mit-license.php
  */
 
-#import "RFUI.h"
+#import <UIKit/UIKit.h>
 #import "RFSegueDelegate.h"
 
 @interface RFPopBarButtonItem : UIBarButtonItem
