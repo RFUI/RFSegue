@@ -1,5 +1,7 @@
 # RFSegue - Missing features for UIStoryboardSegue
 
+[![Build Status](https://travis-ci.org/RFUI/RFSegue.svg?branch=master)](https://travis-ci.org/RFUI/RFSegue)
+
 <base href="//github.com/RFUI/RFSegue/blob/master/" />
 
 *English* [简体中文](Readme~zh-hans.md)
