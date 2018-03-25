@@ -1,10 +1,14 @@
 
-#import "RFSegueShouldReturnDemoViewController.h"
+#import <UIKit/UIKit.h>
+#import "RFSegueDelegate.h"
 
-@interface RFSegueShouldReturnDemoViewController ()
+@interface DMShouldReturnViewController : UIViewController <
+    RFSegueReturnDelegate
+>
+@property (weak, nonatomic) IBOutlet UISwitch *shouldSwitch;
 @end
 
-@implementation RFSegueShouldReturnDemoViewController
+@implementation DMShouldReturnViewController
 
 - (BOOL)RFSegueShouldReturn:(id)sender {
     if (self.shouldSwitch.on) {

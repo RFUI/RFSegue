@@ -14,10 +14,8 @@
 		D509ABA22064EC3800E4F7F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D509ABA12064EC3800E4F7F7 /* Assets.xcassets */; };
 		D509ABA52064EC3800E4F7F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D509ABA32064EC3800E4F7F7 /* LaunchScreen.storyboard */; };
 		D509ABB92064FE5300E4F7F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D509ABAF2064FE5300E4F7F7 /* Main.storyboard */; };
-		D509ABBB2064FE5300E4F7F7 /* RFSegueShouldReturnDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D509ABB32064FE5300E4F7F7 /* RFSegueShouldReturnDemoViewController.m */; };
-		D509ABBC2064FE5300E4F7F7 /* RFSegueDelegateDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D509ABB52064FE5300E4F7F7 /* RFSegueDelegateDemoViewController.m */; };
-		D509ABBD2064FE5300E4F7F7 /* RFSegueShouldPerformDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D509ABB72064FE5300E4F7F7 /* RFSegueShouldPerformDemoViewController.m */; };
-		D51CEC4A2067D701006E2D3C /* RFAsynchronousSegueDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D51CEC492067D701006E2D3C /* RFAsynchronousSegueDemoViewController.m */; };
+		D509ABBB2064FE5300E4F7F7 /* DMShouldReturn.m in Sources */ = {isa = PBXBuildFile; fileRef = D509ABB32064FE5300E4F7F7 /* DMShouldReturn.m */; };
+		D51CEC4A2067D701006E2D3C /* DMAsyncSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = D51CEC492067D701006E2D3C /* DMAsyncSegue.m */; };
 		D5C6E59C206671EA003B1E13 /* Test_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C6E59B206671EA003B1E13 /* Test_iOS.swift */; };
 		D5C6E5A8206671FE003B1E13 /* Test_tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C6E5A7206671FE003B1E13 /* Test_tvOS.swift */; };
 /* End PBXBuildFile section */
@@ -38,14 +36,8 @@
 		D509ABA62064EC3800E4F7F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D509ABAD2064FE5200E4F7F7 /* OC-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OC-Bridging-Header.h"; sourceTree = "<group>"; };
 		D509ABAF2064FE5300E4F7F7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		D509ABB02064FE5300E4F7F7 /* RFSegueShouldReturnDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSegueShouldReturnDemoViewController.h; sourceTree = "<group>"; };
-		D509ABB12064FE5300E4F7F7 /* RFSegueShouldPerformDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSegueShouldPerformDemoViewController.h; sourceTree = "<group>"; };
-		D509ABB32064FE5300E4F7F7 /* RFSegueShouldReturnDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSegueShouldReturnDemoViewController.m; sourceTree = "<group>"; };
-		D509ABB52064FE5300E4F7F7 /* RFSegueDelegateDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSegueDelegateDemoViewController.m; sourceTree = "<group>"; };
-		D509ABB62064FE5300E4F7F7 /* RFSegueDelegateDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSegueDelegateDemoViewController.h; sourceTree = "<group>"; };
-		D509ABB72064FE5300E4F7F7 /* RFSegueShouldPerformDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSegueShouldPerformDemoViewController.m; sourceTree = "<group>"; };
-		D51CEC482067D701006E2D3C /* RFAsynchronousSegueDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFAsynchronousSegueDemoViewController.h; sourceTree = "<group>"; };
-		D51CEC492067D701006E2D3C /* RFAsynchronousSegueDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAsynchronousSegueDemoViewController.m; sourceTree = "<group>"; };
+		D509ABB32064FE5300E4F7F7 /* DMShouldReturn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMShouldReturn.m; sourceTree = "<group>"; };
+		D51CEC492067D701006E2D3C /* DMAsyncSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMAsyncSegue.m; sourceTree = "<group>"; };
 		D5C6E599206671E9003B1E13 /* Test-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Test-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C6E59B206671EA003B1E13 /* Test_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_iOS.swift; sourceTree = "<group>"; };
 		D5C6E59D206671EA003B1E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -110,11 +102,11 @@
 			isa = PBXGroup;
 			children = (
 				D509AB992064EC3700E4F7F7 /* Example */,
+				552446DF5800FC1B40C9253B /* Frameworks */,
+				82DC2091C8A3901AFCDB0B68 /* Pods */,
+				D509AB982064EC3700E4F7F7 /* Products */,
 				D5C6E59A206671EA003B1E13 /* Test-iOS */,
 				D5C6E5A6206671FE003B1E13 /* Test-tvOS */,
-				D509AB982064EC3700E4F7F7 /* Products */,
-				82DC2091C8A3901AFCDB0B68 /* Pods */,
-				552446DF5800FC1B40C9253B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,19 +123,13 @@
 		D509AB992064EC3700E4F7F7 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				D51CEC482067D701006E2D3C /* RFAsynchronousSegueDemoViewController.h */,
-				D51CEC492067D701006E2D3C /* RFAsynchronousSegueDemoViewController.m */,
-				D509ABAF2064FE5300E4F7F7 /* Main.storyboard */,
-				D509ABB62064FE5300E4F7F7 /* RFSegueDelegateDemoViewController.h */,
-				D509ABB52064FE5300E4F7F7 /* RFSegueDelegateDemoViewController.m */,
-				D509ABB12064FE5300E4F7F7 /* RFSegueShouldPerformDemoViewController.h */,
-				D509ABB72064FE5300E4F7F7 /* RFSegueShouldPerformDemoViewController.m */,
-				D509ABB02064FE5300E4F7F7 /* RFSegueShouldReturnDemoViewController.h */,
-				D509ABB32064FE5300E4F7F7 /* RFSegueShouldReturnDemoViewController.m */,
 				D509AB9A2064EC3800E4F7F7 /* AppDelegate.swift */,
 				D509ABA12064EC3800E4F7F7 /* Assets.xcassets */,
-				D509ABA32064EC3800E4F7F7 /* LaunchScreen.storyboard */,
+				D51CEC492067D701006E2D3C /* DMAsyncSegue.m */,
+				D509ABB32064FE5300E4F7F7 /* DMShouldReturn.m */,
 				D509ABA62064EC3800E4F7F7 /* Info.plist */,
+				D509ABA32064EC3800E4F7F7 /* LaunchScreen.storyboard */,
+				D509ABAF2064FE5300E4F7F7 /* Main.storyboard */,
 				D509ABAD2064FE5200E4F7F7 /* OC-Bridging-Header.h */,
 			);
 			path = Example;
@@ -152,8 +138,8 @@
 		D5C6E59A206671EA003B1E13 /* Test-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D5C6E59B206671EA003B1E13 /* Test_iOS.swift */,
 				D5C6E59D206671EA003B1E13 /* Info.plist */,
+				D5C6E59B206671EA003B1E13 /* Test_iOS.swift */,
 			);
 			path = "Test-iOS";
 			sourceTree = "<group>";
@@ -161,8 +147,8 @@
 		D5C6E5A6206671FE003B1E13 /* Test-tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				D5C6E5A7206671FE003B1E13 /* Test_tvOS.swift */,
 				D5C6E5A9206671FE003B1E13 /* Info.plist */,
+				D5C6E5A7206671FE003B1E13 /* Test_tvOS.swift */,
 			);
 			path = "Test-tvOS";
 			sourceTree = "<group>";
@@ -236,6 +222,7 @@
 		D509AB8F2064EC3700E4F7F7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = DM;
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = RFUI;
@@ -280,8 +267,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D509ABA52064EC3800E4F7F7 /* LaunchScreen.storyboard in Resources */,
 				D509ABA22064EC3800E4F7F7 /* Assets.xcassets in Resources */,
+				D509ABA52064EC3800E4F7F7 /* LaunchScreen.storyboard in Resources */,
 				D509ABB92064FE5300E4F7F7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,11 +441,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D509ABBC2064FE5300E4F7F7 /* RFSegueDelegateDemoViewController.m in Sources */,
-				D509ABBB2064FE5300E4F7F7 /* RFSegueShouldReturnDemoViewController.m in Sources */,
-				D509ABBD2064FE5300E4F7F7 /* RFSegueShouldPerformDemoViewController.m in Sources */,
-				D51CEC4A2067D701006E2D3C /* RFAsynchronousSegueDemoViewController.m in Sources */,
 				D509AB9B2064EC3800E4F7F7 /* AppDelegate.swift in Sources */,
+				D51CEC4A2067D701006E2D3C /* DMAsyncSegue.m in Sources */,
+				D509ABBB2064FE5300E4F7F7 /* DMShouldReturn.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
