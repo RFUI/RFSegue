@@ -4,14 +4,7 @@
 #import "RFSegueExternLink.h"
 #import "UIDevice+RFKit.h"
 
-//! REF: http://stackoverflow.com/a/24423494
-NSTimeInterval RFSegueNavigationTransitionDuration = 0.51f;
-
 @implementation RFSegue
-
-+ (void)load {
-    RFSegueNavigationTransitionDuration = RF_iOS7Before? 0.36f : 0.511f;
-}
 
 - (instancetype)initWithIdentifier:(NSString *_Nullable)identifier source:(UIViewController *)source destination:(UIViewController *)destination {
     UIViewController<RFSegueExternLink> *dst = (id)destination;
@@ -42,14 +35,6 @@ NSTimeInterval RFSegueNavigationTransitionDuration = 0.51f;
             self.userInfo];
 }
 
-- (BOOL)shouldPerform {
-    BOOL shouldPerform = YES;
-    if ([self.sourceViewController respondsToSelector:@selector(RFSegueShouldPerform:)]) {
-        shouldPerform = [self.sourceViewController RFSegueShouldPerform:self];
-    }
-    return shouldPerform;
-}
-
 - (void)perform {
     if (![self shouldPerform]) return;
 
@@ -57,32 +42,7 @@ NSTimeInterval RFSegueNavigationTransitionDuration = 0.51f;
 }
 
 - (void)RFPerform {
-    [self noticeDelegateWillPerform];
     RFAssert(false, @"You should subclass RFSegue and override RFPerform.");
-    [self noticeDelegateDidPerformed];
 }
-
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wdeprecated-declarations"
-
-- (void)noticeDelegateWillPerform {
-    if ([self.sourceViewController respondsToSelector:@selector(RFSegueWillPerform:)]) {
-        [self.sourceViewController RFSegueWillPerform:self];
-    }
-    if ([self.destinationViewController respondsToSelector:@selector(RFSegueWillAppear:)]) {
-        [self.destinationViewController RFSegueWillAppear:self];
-    }
-}
-
-- (void)noticeDelegateDidPerformed {
-    if ([self.sourceViewController respondsToSelector:@selector(RFSegueDidPerform:)]) {
-        [self.sourceViewController RFSegueDidPerform:self];
-    }
-    if ([self.destinationViewController respondsToSelector:@selector(RFSegueDidAppear:)]) {
-        [self.destinationViewController RFSegueDidAppear:self];
-    }
-}
-
-#pragma clang diagnostic pop
 
 @end

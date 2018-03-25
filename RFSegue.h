@@ -36,16 +36,4 @@ NS_CLASS_AVAILABLE_IOS(5_0) @interface RFSegue : UIStoryboardSegue
  */
 - (void)RFPerform;
 
-- (void)noticeDelegateWillPerform;
-- (void)noticeDelegateDidPerformed;
-
-/**
- Determines whether the segue should be triggered.
- 
- @discussion Subclass can override this method for additional check. Super must be called.
- */
-- (BOOL)shouldPerform;
-
 @end
-
-extern NSTimeInterval RFSegueNavigationTransitionDuration;

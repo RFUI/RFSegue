@@ -2,7 +2,7 @@
     RFNavigationPushSegue
     RFSegue
 
-    Copyright (c) 2012-2014 BB9z
+    Copyright (c) 2012-2014, 2018 BB9z
     https://github.com/RFUI/RFSegue
 
     The MIT License (MIT)

@@ -1,10 +1,11 @@
 Pod::Spec.new do |s|
   s.name             = 'RFSegue'
-  s.version          = '3.2.0'
+  s.version          = '4.0.0'
   s.summary          = 'Missing features for UIStoryboardSegue.'
 
   s.description      = <<-DESC
-v3 is outdated and abandoned.
+Safter push segue, silent fail when the navigation controller is nil.
+Perform an segue asynchronous.
 DESC
 
   s.homepage         = 'https://github.com/RFUI/RFSegue'
@@ -12,7 +13,7 @@ DESC
   s.author           = { 'BB9z' => 'bb9z@me.com' }
   s.source           = { :git => 'https://github.com/RFUI/RFSegue.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '5.0'
+  s.ios.deployment_target = '6.0'
   s.tvos.deployment_target = '9.0'
 
   s.requires_arc = true

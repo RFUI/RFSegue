@@ -18,7 +18,7 @@ PODS:
     - RFKit/Runtime
   - RFKit/Runtime (1.7.1):
     - RFKit/Foundation
-  - RFSegue (3.2.0):
+  - RFSegue (4.0.0):
     - RFKit/Category/UIDevice
     - RFKit/Category/UINavigationController
     - RFKit/Category/UIResponder
@@ -34,7 +34,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   RFKit: 3c5f2a181777dfeb57b0ea1a004a8ce02d7445ee
-  RFSegue: 2e7e21aec1227d749fec3b2c8f45e3adc9487806
+  RFSegue: 32ca9207d0bcb3f1efff220fa70415f767024f19
 
 PODFILE CHECKSUM: 8a012caa0957d19dc5c666a79767a72b9330643d
 

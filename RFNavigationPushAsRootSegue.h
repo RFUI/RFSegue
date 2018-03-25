@@ -2,7 +2,7 @@
     RFNavigationPushAsRootSegue
     RFSegue
 
-    Copyright (c) 2013-2014 BB9z
+    Copyright (c) 2013-2014, 2018 BB9z
     https://github.com/RFUI/RFSegue
 
     The MIT License (MIT)
@@ -11,5 +11,4 @@
 #import "RFSegue.h"
 
 @interface RFNavigationPushAsRootSegue : RFSegue
-
 @end

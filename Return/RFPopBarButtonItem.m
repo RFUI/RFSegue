@@ -25,15 +25,7 @@
     }
     
     if (shouldReturn) {
-        if ([master respondsToSelector:@selector(RFSegueWillReturn:)]) {
-            [master RFSegueWillReturn:self];
-        }
         [master.navigationController popViewControllerAnimated:YES];
-        dispatch_after_seconds(RFSegueNavigationTransitionDuration, ^{
-            if ([master respondsToSelector:@selector(RFSegueDidReturn:)]) {
-                [master RFSegueDidReturn:self];
-            }
-        });
     }
 }
 
