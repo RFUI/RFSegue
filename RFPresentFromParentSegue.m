@@ -4,10 +4,7 @@
 @implementation RFPresentFromParentSegue
 
 - (void)RFPerform {
-    [self noticeDelegateWillPerform];
-    [[self.sourceViewController parentViewController] presentViewController:self.destinationViewController animated:YES completion:^{
-        [self noticeDelegateDidPerformed];
-    }];
+    [[self.sourceViewController parentViewController] presentViewController:self.destinationViewController animated:YES completion:nil];
 }
 
 @end

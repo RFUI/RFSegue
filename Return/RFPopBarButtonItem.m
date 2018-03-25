@@ -19,14 +19,10 @@
         return;
     }
     
-    BOOL shouldReturn = YES;
     if ([master respondsToSelector:@selector(RFSegueShouldReturn:)]) {
-        shouldReturn = [master RFSegueShouldReturn:self];
+        if (![master RFSegueShouldReturn:self]) return;
     }
-    
-    if (shouldReturn) {
-        [master.navigationController popViewControllerAnimated:YES];
-    }
+    [master.navigationController popViewControllerAnimated:YES];
 }
 
 @end
