@@ -6,6 +6,10 @@
 
 *English* [简体中文](Readme~zh-hans.md)
 
+## Version
+
+v3 was designed when iOS 5 just came out. The architecture is outdated and should be deprecated. Checkout v3 branch for legacy usage.
+
 ## Source & Destination Delegate
 
 By default, only UIViewController's `prepareForSegue:` can notify us the segue will perform. But We can't know when the segue performed. At the same time, you can't stop a segue to be preformed on iOS5.
