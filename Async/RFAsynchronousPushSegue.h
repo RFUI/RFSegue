@@ -1,5 +1,5 @@
 /*!
- RFPresentSegue
+ RFAsynchronousPushSegue
  RFSegue
  
  Copyright (c) 2014, 2018 BB9z
@@ -8,8 +8,8 @@
  The MIT License (MIT)
  http://www.opensource.org/licenses/mit-license.php
  */
-#import "RFSegue.h"
+#import "RFAsynchronousSegue.h"
 
-@interface RFPresentSegue : RFSegue
+@interface RFAsynchronousPushSegue : RFAsynchronousSegue
 
 @end

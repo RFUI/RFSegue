@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "RFSegueDelegate.h"
 
-@interface RFSegueShouldPerformDemoViewController : UIViewController <
-    RFSegueSourceDelegate
->
+@interface RFSegueShouldPerformDemoViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UISwitch *shouldSwitch;
 @end

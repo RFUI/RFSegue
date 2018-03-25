@@ -8,18 +8,13 @@
 @end
 
 @implementation RFAsynchronousSegueDemoViewController
-RFUIInterfaceOrientationSupportDefault
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue isKindOfClass:[RFAsynchronousSegue class]]) {
         RFAsynchronousSegue *s = (id)segue;
         if ([s.identifier isEqualToString:@"PUSH1"]) {
             [s setPerformBlcok:^(RFAsynchronousSegue *this) {
-                [this noticeDelegateWillPerform];
                 [[this.sourceViewController navigationController] pushViewController:this.destinationViewController animated:YES];
-                dispatch_after_seconds(RFSegueNavigationTransitionDuration, ^{
-                    [this noticeDelegateDidPerformed];
-                });
             }];
             self.segue = s;
 

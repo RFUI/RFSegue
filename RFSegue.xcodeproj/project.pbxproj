@@ -17,6 +17,7 @@
 		D509ABBB2064FE5300E4F7F7 /* RFSegueShouldReturnDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D509ABB32064FE5300E4F7F7 /* RFSegueShouldReturnDemoViewController.m */; };
 		D509ABBC2064FE5300E4F7F7 /* RFSegueDelegateDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D509ABB52064FE5300E4F7F7 /* RFSegueDelegateDemoViewController.m */; };
 		D509ABBD2064FE5300E4F7F7 /* RFSegueShouldPerformDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D509ABB72064FE5300E4F7F7 /* RFSegueShouldPerformDemoViewController.m */; };
+		D51CEC4A2067D701006E2D3C /* RFAsynchronousSegueDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D51CEC492067D701006E2D3C /* RFAsynchronousSegueDemoViewController.m */; };
 		D5C6E59C206671EA003B1E13 /* Test_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C6E59B206671EA003B1E13 /* Test_iOS.swift */; };
 		D5C6E5A8206671FE003B1E13 /* Test_tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C6E5A7206671FE003B1E13 /* Test_tvOS.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +44,8 @@
 		D509ABB52064FE5300E4F7F7 /* RFSegueDelegateDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSegueDelegateDemoViewController.m; sourceTree = "<group>"; };
 		D509ABB62064FE5300E4F7F7 /* RFSegueDelegateDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFSegueDelegateDemoViewController.h; sourceTree = "<group>"; };
 		D509ABB72064FE5300E4F7F7 /* RFSegueShouldPerformDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFSegueShouldPerformDemoViewController.m; sourceTree = "<group>"; };
+		D51CEC482067D701006E2D3C /* RFAsynchronousSegueDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFAsynchronousSegueDemoViewController.h; sourceTree = "<group>"; };
+		D51CEC492067D701006E2D3C /* RFAsynchronousSegueDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFAsynchronousSegueDemoViewController.m; sourceTree = "<group>"; };
 		D5C6E599206671E9003B1E13 /* Test-iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Test-iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5C6E59B206671EA003B1E13 /* Test_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_iOS.swift; sourceTree = "<group>"; };
 		D5C6E59D206671EA003B1E13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 		D509AB992064EC3700E4F7F7 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				D51CEC482067D701006E2D3C /* RFAsynchronousSegueDemoViewController.h */,
+				D51CEC492067D701006E2D3C /* RFAsynchronousSegueDemoViewController.m */,
 				D509ABAF2064FE5300E4F7F7 /* Main.storyboard */,
 				D509ABB62064FE5300E4F7F7 /* RFSegueDelegateDemoViewController.h */,
 				D509ABB52064FE5300E4F7F7 /* RFSegueDelegateDemoViewController.m */,
@@ -452,6 +457,7 @@
 				D509ABBC2064FE5300E4F7F7 /* RFSegueDelegateDemoViewController.m in Sources */,
 				D509ABBB2064FE5300E4F7F7 /* RFSegueShouldReturnDemoViewController.m in Sources */,
 				D509ABBD2064FE5300E4F7F7 /* RFSegueShouldPerformDemoViewController.m in Sources */,
+				D51CEC4A2067D701006E2D3C /* RFAsynchronousSegueDemoViewController.m in Sources */,
 				D509AB9B2064EC3800E4F7F7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,6 +547,11 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WARNING_CFLAGS = (
+					"-Weverything",
+					"-Wno-auto-import",
+					"-Wno-objc-missing-property-synthesis",
+				);
 			};
 			name = Debug;
 		};
@@ -592,6 +603,11 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
+				WARNING_CFLAGS = (
+					"-Weverything",
+					"-Wno-auto-import",
+					"-Wno-objc-missing-property-synthesis",
+				);
 			};
 			name = Release;
 		};

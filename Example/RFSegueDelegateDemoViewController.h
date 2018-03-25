@@ -10,8 +10,6 @@
 #import "RFSegueDelegate.h"
 
 @interface RFSegueDelegateDemoViewController : UIViewController <
-    RFSegueSourceDelegate,
-    RFSegueDestinationDelegate,
     RFSegueReturnDelegate
 >
 

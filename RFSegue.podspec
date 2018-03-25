@@ -17,8 +17,8 @@ DESC
   s.tvos.deployment_target = '9.0'
 
   s.requires_arc = true
-  s.source_files = ['*.{h,m}', 'Return/*.{h,m}']
-  s.public_header_files = ['*.h', 'Return/*.h']
+  s.source_files = ['*.{h,m}', 'Async/*.{h,m}', 'Return/*.{h,m}']
+  s.public_header_files = ['*.h', 'Async/*.h', 'Return/*.h']
   s.frameworks = 'UIKit'
 
   s.dependency 'RFKit/Runtime'
