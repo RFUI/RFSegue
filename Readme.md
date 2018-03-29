@@ -9,7 +9,7 @@
 ## CocoaPods Install
 
 ```ruby
-pod 'RFKit', :git => 'https://github.com/RFUI/RFSegue.git'
+pod 'RFSegue', :git => 'https://github.com/RFUI/RFSegue.git'
 ```
 
 ## Version
@@ -17,7 +17,7 @@ pod 'RFKit', :git => 'https://github.com/RFUI/RFSegue.git'
 v3 was designed when iOS 5 just came out. The architecture is outdated and should be deprecated. Checkout v3 branch for legacy usage.
 
 ```ruby
-pod 'RFKit', :git => 'https://github.com/RFUI/RFSegue.git', :branch => 'v3'
+pod 'RFSegue', :git => 'https://github.com/RFUI/RFSegue.git', :branch => 'v3'
 ```
 
 ## Asynchronous segue

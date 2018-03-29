@@ -9,7 +9,7 @@
 ## CocoaPods Install
 
 ```ruby
-pod 'RFKit', :git => 'https://github.com/RFUI/RFSegue.git'
+pod 'RFSegue', :git => 'https://github.com/RFUI/RFSegue.git'
 ```
 
 ## Version
@@ -17,7 +17,7 @@ pod 'RFKit', :git => 'https://github.com/RFUI/RFSegue.git'
 v3 设计之初是 iOS 5 刚出来的时候，架构太落时而废弃。使用旧版请检查 v3 分支。
 
 ```ruby
-pod 'RFKit', :git => 'https://github.com/RFUI/RFSegue.git', :branch => 'v3'
+pod 'RFSegue', :git => 'https://github.com/RFUI/RFSegue.git', :branch => 'v3'
 ```
 
 ## 异步 segue
