@@ -1,6 +1,8 @@
 # RFSegue - Missing features for UIStoryboardSegue
 
-[![Build Status](https://travis-ci.org/RFUI/RFSegue.svg?branch=master)](https://travis-ci.org/RFUI/RFSegue)
+[![Build Status](https://img.shields.io/travis/RFUI/RFSegue.svg?style=flat-square&colorA=333333&colorB=6600cc)](https://travis-ci.org/RFUI/RFSegue)
+[![Codecov](https://img.shields.io/codecov/c/github/RFUI/RFSegue.svg?style=flat-square&colorA=333333&colorB=6600cc)](https://codecov.io/gh/RFUI/RFSegue)
+[![CocoaPods](https://img.shields.io/cocoapods/v/RFSegue.svg?style=flat-square&colorA=333333&colorB=6600cc)](https://cocoapods.org/pods/RFSegue)
 
 <base href="//github.com/RFUI/RFSegue/blob/master/" />
 

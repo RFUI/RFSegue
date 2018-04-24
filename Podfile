@@ -1,14 +1,16 @@
 
-platform :ios, '7.0'
+target 'Example-iOS' do
+    platform :ios, '7.0'
 
-target 'RFSegueExample' do
     pod 'RFSegue', :path => '.'
-end
-
-target 'Test-iOS' do
-    pod 'RFSegue', :path => '.'
+    
+    target 'Test-iOS' do
+        inherit! :search_paths
+    end
 end
 
 target 'Test-tvOS' do
+    platform :tvos, '9.0'
+
     pod 'RFSegue', :path => '.'
 end
