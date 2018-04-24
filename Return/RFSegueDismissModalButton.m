@@ -1,6 +1,6 @@
 
 #import "RFSegueDismissModalButton.h"
-#import "UIView+RFKit.h"
+#import <RFKit/UIView+RFKit.h>
 
 @implementation RFSegueDismissModalButton
 

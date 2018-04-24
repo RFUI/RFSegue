@@ -20,13 +20,58 @@ DESC
   s.tvos.deployment_target = '9.0'
 
   s.requires_arc = true
-  s.source_files = ['*.{h,m}', 'Async/*.{h,m}', 'Return/*.{h,m}']
-  s.public_header_files = ['*.h', 'Async/*.h', 'Return/*.h']
   s.frameworks = 'UIKit'
 
-  s.dependency 'RFKit/Runtime', '>=1.7'
-  s.dependency 'RFKit/Category/UIDevice'
-  s.dependency 'RFKit/Category/UINavigationController'
-  s.dependency 'RFKit/Category/UIResponder'
-  s.dependency 'RFKit/Category/UIView'
+  s.subspec 'Core' do |ss|
+    ss.dependency 'RFKit/Runtime', '>= 1.7'
+    ss.dependency 'RFKit/Category/UIDevice'
+    ss.dependency 'RFKit/Category/UINavigationController'
+
+    ss.source_files = [
+      'RFSegue.{h,m}',
+      'RFSegueDelegate.h',
+      'RFNavigationPush*.{h,m}'
+    ]
+    ss.public_header_files = [
+      'RFSegue.h',
+      'RFSegueDelegate.h',
+      'RFNavigationPush*.h'
+    ]
+  end
+
+  s.subspec 'Present' do |ss|
+    ss.dependency 'RFSegue/Core'
+    ss.source_files = ['RFPresent*.{h,m}']
+    ss.public_header_files = ['RFPresent*.h']
+  end
+
+  s.subspec 'Async' do |ss|
+    ss.dependency 'RFSegue/Core'
+    ss.source_files = ['Async/*.{h,m}']
+    ss.public_header_files = ['Async/*.h']
+  end
+
+  s.subspec 'Return' do |ss|
+    ss.dependency 'RFKit/Runtime', '>= 1.7'
+    ss.dependency 'RFKit/Category/UIView'
+    ss.dependency 'RFKit/Category/UIResponder'
+    ss.dependency 'RFSegue/Core'
+
+    ss.source_files = ['Return/*.{h,m}']
+    ss.public_header_files = ['Return/*.h']
+  end
+
+  s.pod_target_xcconfig = {
+    # These config should only exsists in develop branch.
+    'WARNING_CFLAGS'=> [
+      '-Weverything',                   # Enable all possiable as we are developing a library.
+      '-Wno-gnu-statement-expression',  # Allow ?: expression.
+      '-Wno-gnu-conditional-omitted-operand',
+      '-Wno-auto-import',               # Still needs old #import for backward compatibility. 
+      '-Wno-sign-conversion',
+      '-Wno-sign-compare',
+      '-Wno-double-promotion',
+      '-Wno-objc-missing-property-synthesis'
+    ].join(' ')
+  }
 end

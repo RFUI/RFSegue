@@ -1,6 +1,6 @@
 
 #import "RFNavigationPushReplaceSegue.h"
-#import "UINavigationController+RFKit.h"
+#import <RFKit/UINavigationController+RFKit.h>
 
 @implementation RFNavigationPushReplaceSegue
 

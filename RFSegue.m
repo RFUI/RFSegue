@@ -1,7 +1,7 @@
 
 #import "RFSegue.h"
-#import "RFRuntime.h"
-#import "UIDevice+RFKit.h"
+#import <RFKit/RFRuntime.h>
+#import <RFKit/UIDevice+RFKit.h>
 
 @implementation RFSegue
 

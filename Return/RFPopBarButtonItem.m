@@ -1,6 +1,6 @@
 
 #import "RFPopBarButtonItem.h"
-#import "RFRuntime.h"
+#import <RFKit/RFRuntime.h>
 #import "RFSegue.h"
 
 @implementation RFPopBarButtonItem

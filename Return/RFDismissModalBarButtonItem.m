@@ -1,6 +1,6 @@
 
 #import "RFDismissModalBarButtonItem.h"
-#import "dout.h"
+#import <RFKit/RFRuntime.h>
 
 @implementation RFDismissModalBarButtonItem
 
