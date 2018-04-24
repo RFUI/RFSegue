@@ -13,7 +13,7 @@ DESC
   s.author           = { 'BB9z' => 'bb9z@me.com' }
   s.source           = {
     :git => 'https://github.com/RFUI/RFSegue.git',
-    :branch => 'develop'
+    :tag => s.version.to_s
   }
 
   s.ios.deployment_target = '6.0'
@@ -62,16 +62,5 @@ DESC
   end
 
   s.pod_target_xcconfig = {
-    # These config should only exsists in develop branch.
-    'WARNING_CFLAGS'=> [
-      '-Weverything',                   # Enable all possiable as we are developing a library.
-      '-Wno-gnu-statement-expression',  # Allow ?: expression.
-      '-Wno-gnu-conditional-omitted-operand',
-      '-Wno-auto-import',               # Still needs old #import for backward compatibility. 
-      '-Wno-sign-conversion',
-      '-Wno-sign-compare',
-      '-Wno-double-promotion',
-      '-Wno-objc-missing-property-synthesis'
-    ].join(' ')
   }
 end
