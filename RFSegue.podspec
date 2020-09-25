@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'RFSegue'
-  s.version          = '4.0.0'
+  s.version          = '4.1.0'
   s.summary          = 'Missing features for UIStoryboardSegue.'
 
   s.description      = <<-DESC
@@ -16,7 +16,7 @@ DESC
     :tag => s.version.to_s
   }
 
-  s.ios.deployment_target = '6.0'
+  s.ios.deployment_target = '9.0'
   s.tvos.deployment_target = '9.0'
 
   s.requires_arc = true

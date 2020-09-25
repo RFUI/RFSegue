@@ -11,7 +11,16 @@
 ## CocoaPods Install
 
 ```ruby
-pod 'RFSegue', :git => 'https://github.com/RFUI/RFSegue.git'
+pod 'RFSegue'
+```
+
+Specify develop branch to install the lastest version:
+
+```ruby
+pod 'RFSegue',
+    :git => 'https://github.com/RFUI/RFSegue.git',
+    :branch => 'develop',
+    :subspecs => ['Async', 'Return', 'Present']
 ```
 
 ## Version
