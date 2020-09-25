@@ -7,10 +7,6 @@
 **/*.xcworkspace/xcshareddata/*.xcscmblueprint
 .idea/
 
-# Xcode Injection
-IOSInjectionProject/
-OSXInjectionProject/
-
 ## Build generated
 build/
 DerivedData/

@@ -1,6 +1,6 @@
 
 target 'Example-iOS' do
-    platform :ios, '7.0'
+    platform :ios, '9.0'
 
     pod 'RFSegue', :path => '.'
     
