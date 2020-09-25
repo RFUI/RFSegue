@@ -18,9 +18,15 @@
             [[this.sourceViewController navigationController] pushViewController:this.destinationViewController animated:YES];
         }];
         self.segue = s;
-        
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Push?" message:nil delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Confirm", nil];
-        [alertView show];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Push?" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        __weak __typeof(self)weakSelf = self;
+        [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [weakSelf.segue cancel];
+        }]];
+        [alert addAction:[UIAlertAction actionWithTitle:@"Confirm" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [weakSelf.segue fire];
+        }]];
+        [self presentViewController:alert animated:YES completion:nil];
     }
     else if ([s.identifier isEqualToString:@"PUSH2"]) {
         if (!self.push2ShouldPerformSegue.on) {
@@ -29,15 +35,6 @@
         else {
             [s fire];
         }
-    }
-}
-
-- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    if (buttonIndex) {
-        [self.segue fire];
-    }
-    else {
-        [self.segue cancel];
     }
 }
 
